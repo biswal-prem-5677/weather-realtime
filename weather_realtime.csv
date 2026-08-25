@@ -1,2 +1,3 @@
 Timestamp,City,Latitude,Longitude,Temperature_C,Feels_Like_C,Humidity_Percent,Pressure_hPa,Wind_Speed_mps,Cloud_Cover_Percent,Weather_Condition,Weather_Description,Visibility_m
 2026-08-25 07:36:35,Jatani,20.1667,85.7,32.67,39.67,80,1001,3.09,83,Clouds,broken clouds,10000
+2026-08-25 08:05:52,Jatani,20.1667,85.7,32.67,39.67,79,1002,3.09,83,Clouds,broken clouds,10000
