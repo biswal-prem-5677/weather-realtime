@@ -1,0 +1,49 @@
+name: Weather Update
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      location:
+        description: "City to fetch weather for (optional — defaults to WEATHER_LOCATION variable)"
+        required: false
+        type: string
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    env:
+      OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+      WEATHER_LOCATION: ${{ inputs.location || '' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Resolve location
+        run: |
+          if [ -z "$WEATHER_LOCATION" ]; then
+            echo "WEATHER_LOCATION=${{ vars.WEATHER_LOCATION }}" >> "$GITHUB_ENV"
+          fi
+        shell: bash
+
+      - name: Collect weather data
+        run: python weather_collector.py "$WEATHER_LOCATION"
+
+      - name: Commit updated CSV
+        env:
+          WEATHER_LOCATION: ${{ env.WEATHER_LOCATION }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add weather_realtime.csv
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "chore: update weather data for $WEATHER_LOCATION"
+          git push
