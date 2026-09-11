@@ -153,3 +153,4 @@ Timestamp,City,Latitude,Longitude,Temperature_C,Feels_Like_C,Humidity_Percent,Pr
 2026-09-11 11:15:07,Jatani,20.1667,85.7,28.78,35.78,89,1003,5.66,100,Rain,moderate rain,10000
 2026-09-11 15:02:18,Jatani,20.1667,85.7,27.11,31.39,93,1005,2.06,74,Clouds,broken clouds,10000
 2026-09-11 18:27:08,Jatani,20.1667,85.7,26.56,26.56,97,1006,2.06,73,Clouds,broken clouds,10000
+2026-09-11 21:06:42,Jatani,20.1667,85.7,26,26,97,1005,2.06,100,Rain,light rain,10000
