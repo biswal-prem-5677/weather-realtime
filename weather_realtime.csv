@@ -228,3 +228,4 @@ Timestamp,City,Latitude,Longitude,Temperature_C,Feels_Like_C,Humidity_Percent,Pr
 2026-09-22 06:57:12,Jatani,20.1667,85.7,27.67,33.03,92,1003,4.63,100,Rain,moderate rain,8489
 2026-09-22 12:16:07,Jatani,20.1667,85.7,26,26,99,1000,5.14,100,Rain,heavy intensity rain,7455
 2026-09-22 17:05:02,Jatani,20.1667,85.7,26,26,98,1002,2.57,100,Clouds,overcast clouds,7778
+2026-09-22 20:10:26,Jatani,20.1667,85.7,26,26,97,1000,2.06,100,Clouds,overcast clouds,4269
