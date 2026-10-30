@@ -434,3 +434,4 @@ Timestamp,City,Latitude,Longitude,Temperature_C,Feels_Like_C,Humidity_Percent,Pr
 2026-10-29 19:50:23,Jatani,20.1667,85.7,24.33,25.35,97,1012,0.45,100,Haze,haze,3000
 2026-10-29 23:40:43,Jatani,20.1667,85.7,24.02,24.93,94,1013,1.54,100,Rain,light rain,2500
 2026-10-30 02:56:06,Jatani,20.1667,85.7,26.02,26.02,89,1015,1.54,75,Haze,haze,3000
+2026-10-30 09:17:02,Jatani,20.1667,85.7,27.67,32.57,89,1013,2.06,75,Haze,haze,4500
